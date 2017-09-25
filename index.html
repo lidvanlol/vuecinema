@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Cinema</title>
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <style>
+        [v-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+<div id="app" v-cloak><!--This directive will remain on the element until the associated Vue instance finishes compilation. Combined with CSS rules such as [v-cloak] { display: none }, this directive can be used to hide un-compiled mustache bindings until the Vue instance is ready.-->
+    <div id="title">
+        <img src="/public/logo.png">
+        <h1>Vue.js Cinema</h1>
+    </div>   <!-- When wrapped around a dynamic component, <keep-alive> caches the inactive component instances without destroying them. Similar to <transition>, <keep-alive> is an abstract component: it doesn’t render a DOM element itself, and doesn’t show up in the component parent chain.
+
+When a component is toggled inside <keep-alive>, its activated and deactivated lifecycle hooks will be invoked accordingly. -->
+    <keep-alive>
+        <router-view v-bind:genre="genre" v-bind:time="time" v-bind:movies="movies" v-bind:day="day"></router-view>
+    </keep-alive>
+</div>
+<script src="/dist/build.js"></script>
+</body>
+</html>
