@@ -14,7 +14,6 @@ if (process.env.NODE_ENV === 'production') {
   app.use('/dist', express.static(path.join(__dirname, 'dist')));
 }
 
-
 app.use('/public', express.static(path.join(__dirname, 'public')));
 
 let template = fs.readFileSync(path.resolve('./index.html'), 'utf-8');

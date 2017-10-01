@@ -1,13 +1,9 @@
 {
   "name": "vue-cinema",
   "version": "1.0.0",
-  "description": "The Ultimate Vue.js Developers Course: Vue.js Cinema",
+  "description": "Vue js Cinema app",
   "main": "server.js",
-  "author": "Anthony Gore <anthony@vuejsdevelopers.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vuejsdevelopers/vuejs-cinema"
-  },
+  "author": "Filip Jovkovic",
   "license": "UNLICENSED",
   "scripts": {
     "start": "nodemon ./server.js --ignore src/ -e js,html,css",
